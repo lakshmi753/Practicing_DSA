@@ -28,3 +28,29 @@ waveFormArray(arr1, length);
 
 // Time complexity ---> O(nlogn)(better)
 // Space complexity ---> O(1).
+
+// Making even positioned element greater..............
+
+const arr2 = [45, 203, 67, 98, 50, 407, 90, 89, 100];
+console.log(arr2);
+const length1 = arr2.length - 1;
+
+const wave_form_array = function (arr, len) {
+  let temp;
+  for (let i = 0; i < len; i++) {
+    if (i % 2 == 0) {
+      if (arr[i] < arr[i + 1]) {
+        temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+      }
+    }
+  }
+
+  console.log(arr);
+};
+
+wave_form_array(arr2, length1);
+
+// Time complexity ---> O(n)
+// Space complexity ---> O(1);
